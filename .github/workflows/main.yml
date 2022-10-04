@@ -45,7 +45,7 @@ jobs:
         run: |
           cd build
           make tcversion
-          make -j$(nproc)
+          make -j$(nproc) CFLAGS='-static' CXXFLAGS='-static'
 
       - name: Test
         run: |
