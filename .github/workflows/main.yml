@@ -29,8 +29,8 @@ jobs:
           mkdir build
           cd build
           cmake \
-           -DCMAKE_C_COMPILER='/usr/bin/gcc-5 -static' \
-           -DCMAKE_CXX_COMPILER='/usr/bin/g++-5 -static' \
+           -DCMAKE_C_COMPILER='/usr/bin/gcc-5' -DCMAKE_CFLAGS '-static' -DCMAKE_CXXFLAGS '-static' \
+           -DCMAKE_CXX_COMPILER='/usr/bin/g++-5' \
            -DCMAKE_BUILD_TYPE=Release \
            -DLauncher_NOTIFICATION_URL:STRING=https://files.multimc.org/notifications.json \
            -DCMAKE_INSTALL_PREFIX:PATH=/home/runner/UltimMC/UltimMC \
