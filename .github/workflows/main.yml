@@ -45,7 +45,7 @@ jobs:
         run: |
           cd build
           make tcversion
-          make -j$(nproc) CFLAGS='-static' CXXFLAGS='-static'
+          make -j$(nproc) CC='gcc -static' CXX='g++ -static'
 
       - name: Install
         run: |
